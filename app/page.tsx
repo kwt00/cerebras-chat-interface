@@ -304,9 +304,27 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="flex h-screen bg-dark-900 text-dark-50 overflow-hidden">
+    <div className="flex flex-col h-screen bg-dark-900 text-dark-50 overflow-hidden">
+      {/* Repository banner */}
+      <div className="bg-gradient-to-r from-accent-900/30 to-primary-900/30 px-4 py-2 text-center relative">
+        <div className="flex items-center justify-center gap-2">
+          <span className="text-xs font-mono text-dark-100">Interested in this chat interface?</span>
+          <a 
+            href="https://github.com/kwt00/cerebras-chat-interface"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-xs font-mono font-semibold bg-accent-600/20 hover:bg-accent-600/40 text-accent-300 hover:text-accent-200 transition-colors px-3 py-1.5 rounded-sm"
+            aria-label="Clone Repository"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            Clone This Repository Yourself!
+          </a>
+        </div>
+      </div>
       {/* Main content area */}
-      <div className={`flex flex-col w-full transition-all duration-300 ease-in-out ${isSidebarOpen ? 'mr-80' : 'mr-0'}`}>
+      <div className={`flex flex-col flex-1 w-full transition-all duration-300 ease-in-out ${isSidebarOpen ? 'mr-80' : 'mr-0'}`}>
         {/* Header */}
         <header className="sticky top-0 z-10 flex items-center justify-between border-b border-primary-900/30 bg-dark-900 px-6 py-3">
           <div className="flex items-center">
