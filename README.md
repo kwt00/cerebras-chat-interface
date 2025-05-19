@@ -29,7 +29,7 @@ A sleek chat UI powered by Cerebras models.
 
 ## 🔑 Usage
 
-1. On first launch, you’ll be prompted to enter your Cerebras API key. (You can get one from [Cerebras Cloud](https://cloud.cerebras.ai))
+1. On first launch, you’ll be prompted to enter your Cerebras API key. (You can get one for free from [Cerebras Cloud](https://cloud.cerebras.ai))
 2. Start chatting! Messages stream live from the Cerebras model.
 
 ---
