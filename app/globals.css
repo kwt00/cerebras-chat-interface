@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: rgb(138, 43, 226);
+  --primary-light: rgb(147, 51, 234);
+  --primary-dark: rgb(126, 34, 206);
+  --accent-color: rgb(255, 20, 147);
+  --accent-light: rgb(255, 105, 180);
+}
+
+body {
+  font-family: 'JetBrains Mono', 'SF Mono', 'Roboto Mono', monospace;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+/* Custom scrollbar - sharp and minimal */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(147, 51, 234, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 20, 147, 0.7);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(5px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 0px rgba(147, 51, 234, 0.5); }
+  50% { box-shadow: 0 0 10px rgba(147, 51, 234, 0.8); }
+  100% { box-shadow: 0 0 0px rgba(147, 51, 234, 0.5); }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.2s ease forwards;
+}
+
+.animate-glow {
+  animation: glowPulse 2s infinite;
+}
+
+/* Sharp edge effect */
+.sharp-edge {
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  box-shadow: 0 0 0 1px rgba(147, 51, 234, 0.1);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(90deg, #9333ea, #ff1493);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Neon text effect */
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(147, 51, 234, 0.8), 0 0 10px rgba(147, 51, 234, 0.5);
+}
+
+/* Code syntax highlighting */
+code {
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  border-radius: 0 !important;
+}
+
+pre {
+  border-radius: 0 !important;
+  border: 1px solid rgba(147, 51, 234, 0.3) !important;
+  background-color: rgba(10, 10, 15, 0.8) !important;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.3s ease-in-out;
+}
